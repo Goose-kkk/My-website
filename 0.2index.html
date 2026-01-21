@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:pagekeywords}">
+<meta name="description" content="{pboot:pagedescription}">
+<meta name="author" content="www.niumacms.com"/>
+<link href="{pboot:sitedomain}/skin/css/font-awesome.min.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/owl.carousel.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/grid.1.1.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/base.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/plugin-style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/el-style.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery-1.11.0.min.js"></script>
+<script>var website = {
+'root': '/skin',
+'websiteId': '556',
+'currentNavId': 'nav_home',
+'resourceId': '',
+'resourceCode': '',
+'isMobile': navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i)
+};</script>
+<script src="{pboot:sitedomain}/skin/js/functions.js"></script>
+<script src="{pboot:sitedomain}/skin/js/sea.js"></script>
+<script src="{pboot:sitedomain}/skin/js/sea.run.js"></script>
+<script>website["dataId"] = '';</script>
+<style>
+    /* 社交媒体区域样式 */
+    .social-media-section {
+        text-align: center;
+        padding: 80px 0;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        border-radius: 20px;
+        margin: 40px auto;
+        max-width: 1200px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .social-media-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 30% 30%, rgba(255, 51, 102, 0.1) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    
+    .section-title {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #ffffff, #ff3366);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 1px;
+    }
+    
+    .section-subtitle {
+        color: #cccccc;
+        max-width: 700px;
+        margin: 0 auto 50px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+    .brand-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    
+    .brand-logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 5px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+    
+    .brand-logo:hover {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 15px 40px rgba(255, 51, 102, 0.3);
+        border-color: rgba(255, 51, 102, 0.3);
+    }
+    
+    .brand-name {
+        font-size: 32px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    
+    .brand-tagline {
+        color: #ff3366;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    
+    .social-icons-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .social-icons-container.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .social-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .social-icon::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        opacity: 0.9;
+        z-index: 1;
+    }
+    
+    .social-icon i {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .social-icon:hover {
+        transform: translateY(-10px) scale(1.2);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .social-icon.bilibili {
+        background: linear-gradient(135deg, #fb7299, #ff85ad);
+    }
+    
+    .social-icon.douyin {
+        background: linear-gradient(135deg, #000000, #ff0050);
+    }
+    
+    .social-icon.weibo {
+        background: linear-gradient(135deg, #e6162d, #ff2e3f);
+    }
+    
+    .social-icon.wechat {
+        background: linear-gradient(135deg, #07c160, #09e372);
+    }
+    
+    .social-tooltip {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 10;
+    }
+    
+    .social-icon:hover .social-tooltip {
+        opacity: 1;
+    }
+    
+    .social-tooltip::after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+    }
+    
+    .hint-text {
+        color: #888;
+        font-size: 14px;
+        margin-top: 20px;
+        font-style: italic;
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        .social-media-section {
+            padding: 50px 20px;
+            margin: 20px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+        }
+        
+        .brand-logo {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .brand-name {
+            font-size: 26px;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        
+        .social-icons-container {
+            gap: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            font-size: 18px;
+        }
+        
+        .social-icons-container {
+            gap: 15px;
+        }
+    }
+</style>
+</head>
+
+<body>
+{include file=head.html}
+
+<!-- 社交媒体区域 -->
+<div class="social-media-section">
+    <div class="container">
+ 
+        
+        <div class="brand-container" id="brandContainer">
+            <img src="/template/xiuzhanwang/logo/logo.jpg" alt="阿康坊 Logo" class="brand-logo" id="brandLogo">
+            <div class="brand-name">阿康坊</div>
+            <div class="brand-tagline">与你分享有趣的科技体验</div>
+            
+            <div class="social-icons-container" id="socialIcons">
+                <!-- B站图标 -->
+                <a href="https://space.bilibili.com/327595094" target="_blank" class="social-icon bilibili">
+                    <i class="fab fa-bilibili"></i>
+                    <span class="social-tooltip">Bilibili</span>
+                </a>
+                
+                <!-- 抖音图标 -->
+                <a href="https://v.douyin.com/ul8SI7esVf8/" target="_blank" class="social-icon douyin">
+                    <i class="fab fa-tiktok"></i>
+                    <span class="social-tooltip">抖音</span>
+                </a>
+                
+                <!-- 微博图标 -->
+                <a href="https://weibo.com/u/6026113888" target="_blank" class="social-icon weibo">
+                    <i class="fab fa-weibo"></i>
+                    <span class="social-tooltip">微博</span>
+                </a>
+                
+                <!-- 公众号图标 -->
+                <a href="#" class="social-icon wechat" id="wechatIcon">
+                    <i class="fab fa-weixin"></i>
+                    <span class="social-tooltip">微信公众号</span>
+                </a>
+            </div>
+            
+            <p class="hint-text">鼠标移动到Logo上查看社交媒体链接</p>
+        </div>
+    </div>
+</div>
+
+{include file=foot.html}
+
+<!-- 微信公众号二维码弹窗 -->
+<div id="wechatModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="background: white; padding: 30px; border-radius: 15px; text-align: center; max-width: 400px; width: 90%;">
+        <h3 style="margin-bottom: 20px; color: #333;">阿康坊微信公众号</h3>
+        <img src="/template/xiuzhanwang/logo/阿康坊公众号.jpg" alt="阿康坊公众号二维码" style="width: 100%; max-width: 300px; border-radius: 10px; margin-bottom: 20px;">
+        <p style="color: #666; margin-bottom: 20px;">扫描二维码关注阿康坊公众号</p>
+        <button id="closeModal" style="background: #ff3366; color: white; border: none; padding: 10px 30px; border-radius: 25px; cursor: pointer; font-size: 16px;">关闭</button>
+    </div>
+</div>
+
+<script>
+// 社交媒体图标显示/隐藏
+document.addEventListener('DOMContentLoaded', function() {
+    const brandLogo = document.getElementById('brandLogo');
+    const brandContainer = document.getElementById('brandContainer');
+    const socialIcons = document.getElementById('socialIcons');
+    const wechatIcon = document.getElementById('wechatIcon');
+    const wechatModal = document.getElementById('wechatModal');
+    const closeModal = document.getElementById('closeModal');
+    
+    // 鼠标进入品牌容器时显示社交媒体图标
+    brandContainer.addEventListener('mouseenter', function() {
+        socialIcons.classList.add('active');
+    });
+    
+    // 鼠标离开品牌容器时隐藏社交媒体图标
+    brandContainer.addEventListener('mouseleave', function() {
+        socialIcons.classList.remove('active');
+    });
+    
+    // 点击微信公众号图标显示二维码弹窗
+    wechatIcon.addEventListener('click', function(e) {
+        e.preventDefault();
+        wechatModal.style.display = 'flex';
+    });
+    
+    // 关闭弹窗
+    closeModal.addEventListener('click', function() {
+        wechatModal.style.display = 'none';
+    });
+    
+    // 点击弹窗外部关闭
+    wechatModal.addEventListener('click', function(e) {
+        if (e.target === wechatModal) {
+            wechatModal.style.display = 'none';
+        }
+    });
+    
+    // 为品牌Logo添加点击效果
+    brandLogo.addEventListener('click', function() {
+        this.style.transform = 'scale(1.2) rotate(10deg)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 300);
+    });
+    
+    // 添加图标悬停动画
+    const socialIconsList = document.querySelectorAll('.social-icon');
+    socialIconsList.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) scale(1.3)';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});
+
+// 检查是否已加载FontAwesome，如果没有则动态加载
+if (!document.querySelector('link[href*="fontawesome"]')) {
+    const faLink = document.createElement('link');
+    faLink.rel = 'stylesheet';
+    faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(faLink);
+}
+</script>
+</body>
+</html>
